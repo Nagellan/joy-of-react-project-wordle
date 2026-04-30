@@ -185,6 +185,48 @@ h1 {
   color: white;
 }
 
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.keyboard .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 4px;
+}
+
+.keyboard .row .letter {
+  display: inline-flex;
+  height: 40px;
+  width: 40px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid black;
+}
+
+.keyboard .row .letter.incorrect {
+   background: var(--color-gray-300);
+  border-color: var(--color-gray-300);
+  color: white;
+}
+
+.keyboard .row .letter.correct {
+  background: var(--color-success);
+  border-color: var(--color-success);
+  color: white;
+}
+
+.keyboard .row .letter.misplaced {
+  background: var(--color-warning);
+  border-color: var(--color-warning);
+  color: white;
+}
+
 .visually-hidden {
   position: absolute;
   overflow: hidden;

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import GuessResults from '../GuessResults';
 import GuessInput from '../GuessInput';
+import Keyboard from '../Keyboard';
 import WinBanner from '../WinBanner';
 import LoseBanner from '../LoseBanner';
 
@@ -43,6 +44,7 @@ function Game() {
         onSubmit={onSubmit}
         disabled={gameStatus !== 'playing'}
       />
+      <Keyboard guesses={guesses} answer={answer} />
       {gameStatus === 'win' && (
         <WinBanner guessesCount={guesses.length} />
       )}
