@@ -2,7 +2,7 @@ import React from 'react';
 
 import Banner from '../Banner';
 
-function WinBanner({ guessesCount }) {
+function WinBanner({ guessesCount, onRestart }) {
   return (
     <Banner status="happy">
       <p>
@@ -12,6 +12,7 @@ function WinBanner({ guessesCount }) {
           {guessesCount === 1 ? '1 guess' : `${guessesCount} guesses`}
         </strong>.
       </p>
+      <button onClick={onRestart}>Restart the game</button>
     </Banner>
   );
 }
