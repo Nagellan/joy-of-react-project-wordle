@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function GuessInput({ onSubmit }) {
+function GuessInput({ onSubmit, disabled }) {
   const [value, setValue] = useState('');
 
   const handleSubmit = (event) => {
@@ -30,6 +30,7 @@ function GuessInput({ onSubmit }) {
         pattern="[A-Z]{5}"
         title="5 letter word"
         required
+        disabled={disabled}
         onChange={(event) => {
           setValue(event.target.value.toUpperCase());
         }}
